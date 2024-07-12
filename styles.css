@@ -1,0 +1,318 @@
+/* General Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    font-size: large;
+}
+
+/* Container Styles */
+.container {
+    text-align: center;
+    max-width: 800px;
+    perspective: 1000px;
+    animation: fadeIn 2s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.details{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: larger;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Profile Image Styles */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(213, 155, 45, 0.5);
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Title and Subtitle Styles */
+.title {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #f4a261;
+    transform: translateZ(50px);
+    animation: slideIn 2s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #fff;
+    transform: translateZ(30px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Social Links Styles */
+.social-links a {
+    color: #ba2626;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.5);
+    color: #f4a261;
+    text-shadow: 0 0 10px #f4a261;
+    animation: rotate 1s ease-in-out;
+}
+
+/* Button Styles */
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #f4a261;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+    color: #f4a261;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #f4a261;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* About, Skills, Contact Text Styles */
+.about-text,
+.skills-text,
+.contact-text {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ddd;
+    text-align: left;
+    transform: translateZ(20px);
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Skills List Styles */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    color: #ddd;
+}
+
+.skills-list li {
+    margin: 10px 0;
+    transform: translateZ(10px);
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+}
+
+.skills-list li:hover {
+    color: #f4a261;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #f4a261;
+    animation: rotate 1s ease-in-out;
+}
+
+/* Navigation Styles */
+.nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+.nav a:hover {
+    color: #f4a261;
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px #f4a261;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Contact Form Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    color: #f4a261;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #f4a261;
+    box-shadow: 0 0 10px #f4a261;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #f4a261;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    color: #000;
+}
+
+.contact-form button:hover {
+    background-color: #fff;
+    color: #f4a261;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #f4a261;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Image Hover Effects */
+.profile-img:hover {
+    animation: rotate 1s ease-in-out;
+}
+
+/* Gradient Background */
+.section {
+    background: linear-gradient(to right, #000000, #434343); /* Example gradient colors */
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Microinteractions */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #f4a261;
+    box-shadow: 0 0 5px #f4a261;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Page Transition Effects */
+.page-transition-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.page-transition-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.page-transition-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page-transition-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+}
