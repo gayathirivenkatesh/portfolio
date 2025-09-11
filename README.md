@@ -41,9 +41,3 @@ Clone the repository:
 ```bash
 git clone https://github.com/gayathirivenkatesh/portfolio.git
 cd portfolio
-
-## 📧 Contact
-
-Name: Gayathiri Venkatesh
-Portfolio: Live Link
-GitHub: @gayathirivenkatesh
