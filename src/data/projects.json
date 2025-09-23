@@ -1,23 +1,23 @@
 [
   {
-    "title": "Placement Portal",
-    "description": "A full-stack student-company placement portal built with React, Node.js, and MongoDB. Includes features for student registration, company job postings, and application tracking with real-time updates.",
-    "skills": ["React", "Node.js", "MongoDB", "Express"],
-    "demo": "https://placement-registration-formfr.onrender.com",
-    "source": "https://github.com/gayathirivenkatesh/prf"
+    "title": "AI-Powered Career Portal",
+    "description": "A full-stack career platform built with FastAPI, React, and MongoDB. Features role-based dashboards for students, recruiters, and alumni, integrated with AI-driven insights for personalized career recommendations.",
+    "skills": ["React", "FastAPI", "MongoDB", "AI"],
+    "demo": "https://www.example.com/career-portal-demo",
+    "source": "https://github.com/gayathirivenkatesh/career-portal"
   },
   {
     "title": "Smart Hotel Management System",
-    "description": "A full-stack AI-integrated hotel system built with Django and React to enhance guest experiences and operational efficiency.",
+    "description": "A backend-focused AI-integrated hotel management system built with Django and React. Implements guest prediction models, personalized suggestions, and a blockchain-style ledger for secure and transparent transactions.",
     "skills": ["Django", "React", "AI", "Blockchain"],
     "demo": "https://www.example.com/smart-hotel-demo",
     "source": "https://github.com/gayathirivenkatesh/smart-hotel-ai-system"
   },
   {
-    "title": "E-Commerce Web App",
-    "description": "A complete e-commerce platform built with React and Node.js, featuring product listings, cart functionality, and user authentication. Backend services are powered by PHP and MySQL for data management.",
-    "skills": ["React", "Node.js", "PHP", "MySQL"],
-    "demo": "https://www.example.com/ecommerce-demo",
-    "source": "https://github.com/gayathirivenkatesh/ecommerce"
+    "title": "Image, Text, Video & Metadata Anonymizer",
+    "description": "A FastAPI–React application for secure anonymization of multimedia and metadata. Includes an intuitive upload, preview, and comparison workflow to enhance user privacy.",
+    "skills": ["React", "FastAPI", "Python", "Data Privacy"],
+    "demo": "https://anonymizer-seven.vercel.app",
+    "source": "https://github.com/gayathirivenkatesh/anonymizer"
   }
 ]

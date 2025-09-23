@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -19,7 +18,7 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Frontend Developer</h3>
               <p>
-                I specialize in building responsive, user-friendly interfaces using React, HTML, and CSS with a focus on performance and design consistency.
+                I build responsive and user-friendly interfaces using React, HTML, and CSS. My focus is on delivering seamless user experiences and visually consistent designs.
               </p>
             </div>
           </li>
@@ -28,16 +27,16 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Backend Developer</h3>
               <p>
-                Skilled in creating scalable RESTful APIs using Node.js, Flask, and Django. Experienced in database integration with MongoDB and SQL.
+                Experienced in creating scalable RESTful APIs using FastAPI, Node.js, and Django, with database integration using MongoDB and SQL. I focus on performance and reliability in server-side development.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/uiIcon.png")} alt="UI/UX icon" />
+            <img src={getImageUrl("about/uiIcon.png")} alt="AI/Full-Stack icon" />
             <div className={styles.aboutItemText}>
-              <h3>UI/UX Designer</h3>
+              <h3>Full-Stack & AI Enthusiast</h3>
               <p>
-                I enjoy crafting clean, intuitive user interfaces and have experience designing application workflows using Figma and prototyping tools.
+                Passionate about building end-to-end applications that integrate AI-driven features. I have experience with project workflows involving backend logic, frontend interfaces, and AI-based solutions for smarter applications.
               </p>
             </div>
           </li>

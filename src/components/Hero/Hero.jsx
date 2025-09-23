@@ -7,22 +7,20 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm Gayathiri</h1>
-<p className={styles.description}>
-  I'm an enthusiastic full-stack developer skilled in React, Flask, Django, and MongoDB.  
-  I have a strong foundation in UI/UX design, database systems, and scalable web application development.  
-  I’m eager to apply my skills in dynamic tech environments to build impactful software solutions.
-</p>
+        <h1 className={styles.title}>Hi, I'm Gayathiri V</h1>
+        <p className={styles.description}>
+          Passionate Computer Technology undergraduate with hands-on experience in software development, full-stack development, and AI-driven solutions.  
+          Interested in cloud computing and machine learning, eager to contribute innovative ideas to dynamic development teams.
+        </p>
 
-<a
-  href="/resume/Gayathiri_Resume.pdf"
-  className={styles.contactBtn}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  View CV
-</a>
-
+      <a
+        href="/portfolio/resume/GayathiriV_Resume.pdf"
+        className={styles.contactBtn}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View CV
+      </a>
       </div>
       <img
         src={getImageUrl("hero/heroImage.png")}

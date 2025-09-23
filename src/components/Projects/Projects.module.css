@@ -1,5 +1,6 @@
 @import "../../vars.css";
 
+/* Container */
 .container {
   margin-top: 76px;
   color: var(--color-text);
@@ -7,20 +8,49 @@
   margin-right: 10%;
 }
 
+/* Section Title */
 .title {
   font-size: 35px;
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
+  text-align: center;
 }
 
+/* Projects Grid */
 .projects {
   margin-top: 37px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 15px;
   width: 100%;
+}
+
+/* Desktop: 3 cards per row */
+.projects > .project-card {
+  flex: 1 1 calc((100% / 3) - 15px);
+  min-width: 280px;
+}
+
+/* Tablet: 2 cards per row */
+@media screen and (max-width: 1024px) {
+  .projects > .project-card {
+    flex: 1 1 calc((100% / 2) - 15px);
+  }
+}
+
+/* Mobile: 1 card per row */
+@media screen and (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .projects > .project-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
