@@ -14,7 +14,7 @@ export const Hero = () => {
         </p>
 
       <a
-        href="/portfolio/resume/GayathiriV_Resume.pdf"
+        href="dist/resume/GayathiriV_Resume.pdf"
         className={styles.contactBtn}
         target="_blank"
         rel="noopener noreferrer"

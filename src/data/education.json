@@ -1,0 +1,28 @@
+[
+  {
+    "degree": "Bachelor of Technology in Computer Technology",
+    "institution": "Bannari Amman Institute of Technology",
+    "year": "2022 – 2026",
+    "details": [
+      "CGPA: 8.13 (up to VI semester)",
+      "Focused on Software Development, Full-Stack Development, and AI-driven Solutions"
+    ]
+  },
+  {
+    "degree": "Higher Secondary Certificate (HSC)",
+    "institution": "Holy Angels Matric Higher Secondary School",
+    "year": "2021 – 2022",
+    "details": [
+      "Percentage: 95.5%",
+      "Maths – Computer Science Stream"
+    ]
+  },
+  {
+    "degree": "Secondary School Leaving Certificate (SSLC)",
+    "institution": "Holy Angels Matric Higher Secondary School",
+    "year": "2019 – 2020",
+    "details": [
+      "Percentage: 92%"
+    ]
+  }
+]

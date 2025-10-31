@@ -1,43 +1,39 @@
 import React from "react";
 import styles from "./ProjectCard.module.css";
-import { getImageUrl } from "../../utils";
 
-export const ProjectCard = ({
-  project: { title, imageSrc, description, skills, demo, source },
-}) => {
+export const ProjectCard = ({ project }) => {
   return (
-    <div className={styles.container}>
-      {/* Optional project image */}
-      {imageSrc && (
-        <img
-          src={getImageUrl(imageSrc)}
-          alt={`Screenshot of ${title}`}
-          className={styles.image}
-        />
-      )}
+    <div className={styles.card}>
+      <h3 className={styles.projectTitle}>{project.title}</h3>
+      <p className={styles.projectDescription}>{project.description}</p>
 
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
-
-      {/* Skills / Tech Tags */}
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => (
-          <li key={id} className={styles.skill}>
+      <div className={styles.skills}>
+        {project.skills.map((skill, index) => (
+          <span key={index} className={styles.skill}>
             {skill}
-          </li>
+          </span>
         ))}
-      </ul>
+      </div>
 
-      {/* Links */}
       <div className={styles.links}>
-        {demo && (
-          <a href={demo} target="_blank" rel="noopener noreferrer" className={styles.link}>
-            Demo
+        {project.documentation && (
+          <a
+            href={project.documentation}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            📄 Documentation
           </a>
         )}
-        {source && (
-          <a href={source} target="_blank" rel="noopener noreferrer" className={styles.link}>
-            Source
+        {project.source && (
+          <a
+            href={project.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            💻 Source Code
           </a>
         )}
       </div>

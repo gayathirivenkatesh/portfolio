@@ -1,47 +1,70 @@
 @import "../../vars.css";
 
-/* Container */
+/* 🌙 Section Container */
 .container {
-  margin-top: 76px;
+  margin-top: 100px;
   color: var(--color-text);
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-/* Section Title */
-.title {
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 8%;
   text-align: center;
 }
 
-/* Projects Grid */
+/* ✨ Title */
+.title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px rgba(189, 167, 127, 0.25);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--color-primary);
+  margin: 14px auto 0;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* 🧩 Projects Grid */
 .projects {
-  margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: center;
-  gap: 15px;
+  gap: 30px;
   width: 100%;
+  transition: all 0.3s ease;
 }
 
-/* Desktop: 3 cards per row */
+/* 🪶 Each Card Layout Rule (for spacing control only) */
 .projects > .project-card {
-  flex: 1 1 calc((100% / 3) - 15px);
-  min-width: 280px;
+  flex: 1 1 calc(33.33% - 30px);
+  min-width: 300px;
+  max-width: 380px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Tablet: 2 cards per row */
+/* Subtle lift + glow effect when hovered */
+.projects > .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(189, 167, 127, 0.2);
+}
+
+/* 💻 Tablet: 2 cards per row */
 @media screen and (max-width: 1024px) {
   .projects > .project-card {
-    flex: 1 1 calc((100% / 2) - 15px);
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
-/* Mobile: 1 card per row */
+/* 📱 Mobile: 1 card per row */
 @media screen and (max-width: 768px) {
   .projects {
     flex-direction: column;
@@ -52,5 +75,10 @@
   .projects > .project-card {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+    text-shadow: 0 0 6px rgba(189, 167, 127, 0.2);
   }
 }

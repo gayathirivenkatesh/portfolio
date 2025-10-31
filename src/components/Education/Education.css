@@ -1,0 +1,163 @@
+@import "../../vars.css";
+
+/* 🏫 Container */
+.education-container {
+  color: var(--color-text);
+  margin: 100px auto;
+  padding: 0 6%;
+  max-width: 1100px;
+  position: relative;
+}
+
+/* 🎓 Title */
+.education-title {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.6px;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(189, 167, 127, 0.25);
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* 📜 Timeline Wrapper */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+/* ✨ Center Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(189, 167, 127, 0.8),
+    rgba(189, 167, 127, 0.3)
+  );
+  transform: translateX(-50%);
+}
+
+/* 🟡 Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* ✨ Golden Dot */
+.timeline-dot {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(189, 167, 127, 0.6);
+  z-index: 2;
+}
+
+/* 🪶 Card Content */
+.timeline-content {
+  background: var(--glass-light);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  max-width: 90%;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item.left .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(189, 167, 127, 0.3);
+}
+
+/* 🎓 Text Styling */
+.timeline-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.edu-inst {
+  font-size: 1rem;
+  color: rgba(228, 226, 220, 0.9);
+  margin-bottom: 4px;
+}
+
+.edu-year {
+  font-size: 0.95rem;
+  color: rgba(189, 167, 127, 0.85);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.edu-details {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 0.95rem;
+  color: rgba(228, 226, 220, 0.85);
+  line-height: 1.6;
+}
+
+/* 📱 Responsive (Mobile View) */
+@media screen and (max-width: 900px) {
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .timeline-dot {
+    left: 12px;
+    transform: none;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    text-align: left;
+    left: 0;
+  }
+}

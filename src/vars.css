@@ -1,11 +1,27 @@
 :root {
-  /* Colours */
-  --color-text: #fff;
-  --color-primary: #576cbc;
-  --color-secondary: #19376d;
-  --color-dark: #0b2447;
-  --color-bg: #04152d;
+  /* 🎨 Core Colors — Dark & Regal */
+  --color-text: #e4e2dc;              /* Warm ivory-white for elegant readability */
+  --color-primary: #bda77f;           /* Muted royal gold accent */
+  --color-secondary: #374b73;         /* Deep royal blue with gray undertone */
+  --color-dark: #0d111a;              /* Rich obsidian base */
+  --color-bg: #151b26;                /* Slightly lighter dark for contrast layers */
 
-  /* Fonts */
-  --font-roboto: "Roboto";
+  /* ✨ Glass & Glow Effects */
+  --glass-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-glow: rgba(189, 167, 127, 0.25); /* Soft gold glow */
+
+  /* 🌌 Gradient System */
+  --gradient-bg: linear-gradient(135deg, #0d111a 0%, #1b2333 50%, #232b3d 100%);
+  --gradient-royal: linear-gradient(145deg, #1a2235 0%, #2a3350 50%, #374b73 100%);
+  --gradient-gold: linear-gradient(90deg, #bda77f 0%, #d1c09a 50%, #bda77f 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+
+  /* 🪞 Shadows & Highlights */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(189, 167, 127, 0.15);
+  --shadow-card: 0 10px 30px rgba(55, 75, 115, 0.2);
+
+  /* 🖋 Fonts */
+  --font-roboto: "Poppins", "Roboto", sans-serif;
 }

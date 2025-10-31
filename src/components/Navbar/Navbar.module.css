@@ -1,82 +1,148 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  padding: 28px 10%;
+  background: rgba(21, 27, 38, 0.55); /* translucent royal backdrop */
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 100;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+.navbar:hover {
+  background: rgba(21, 27, 38, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Brand title */
 .title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 600;
+  color: var(--color-primary);
   text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(189, 167, 127, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title:hover {
   color: var(--color-text);
+  text-shadow: 0 0 10px rgba(189, 167, 127, 0.5);
 }
 
-
-.menuBtn {
-  display: none;
-}
-
+/* Desktop menu */
 .menu {
   display: flex;
 }
 
 .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 40px;
   list-style: none;
 }
 
 .menuItems a {
-  font-size: 25px;
+  font-size: 18px;
   color: var(--color-text);
   text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
+/* Subtle hover underline */
+.menuItems a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.menuItems a:hover {
+  color: var(--color-primary);
+}
+
+.menuItems a:hover::after {
+  width: 100%;
+}
+
+/* Mobile menu button */
+.menuBtn {
+  display: none;
+  cursor: pointer;
+  z-index: 101;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.menuBtn img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 5px rgba(189, 167, 127, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.menuBtn:hover img {
+  transform: scale(1.1);
+}
+
+/* 📱 Mobile menu layout */
 @media screen and (max-width: 830px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 20px 8%;
+    flex-direction: row;
   }
 
   .menu {
     position: absolute;
-    right: 0;
-    margin-right: 10%;
+    top: 100%;
+    right: 8%;
     flex-direction: column;
     align-items: flex-end;
-    gap: 11px;
-    z-index: 3;
-  }
-
-  .menuBtn {
-    display: block;
-    cursor: pointer;
+    gap: 10px;
+    z-index: 99;
   }
 
   .menuItems {
     display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 13px;
-    border-radius: 10px;
-    background: rgb(25, 55, 109);
-    background: linear-gradient(
-      0deg,
-      rgba(25, 55, 109, 0.2) 0%,
-      rgba(25, 55, 109, 1) 100%
-    );
-    padding: 24px 33px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    align-items: flex-start;
+    gap: 14px;
+    border-radius: 16px;
+    background: rgba(21, 27, 38, 0.8);
+    backdrop-filter: blur(14px);
+    padding: 24px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .menuOpen {
     display: flex;
-    z-index: 1;
+  }
+
+  .menuItems a {
+    font-size: 20px;
+  }
+
+  .menuItems a::after {
+    display: none; /* cleaner mobile look */
+  }
+
+  .menuBtn {
+    display: block;
   }
 }
