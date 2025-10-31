@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Projects.module.css";
 
 import projects from "../../data/projects.json";
-import { ProjectCard } from "./ProjectCard";
+import  ProjectCard  from "./ProjectCard";
 
 export const Projects = () => {
   return (

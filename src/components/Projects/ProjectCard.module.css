@@ -32,6 +32,7 @@
   );
   opacity: 0;
   transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
 .card:hover::before {
@@ -90,6 +91,12 @@
   flex-wrap: wrap;
   gap: clamp(12px, 1.5vw, 18px);
   justify-content: flex-start;
+}
+
+.links a {
+  position: relative;
+  z-index: 2; /* ensures anchor tags stay on top */
+  pointer-events: auto;
 }
 
 .link {
