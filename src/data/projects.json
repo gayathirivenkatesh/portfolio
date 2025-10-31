@@ -1,23 +1,23 @@
 [
   {
-    "title": "AI-Powered Career Portal",
-    "description": "A full-stack career platform built with FastAPI, React, and MongoDB. Features role-based dashboards for students, recruiters, and alumni, integrated with AI-driven insights for personalized career recommendations.",
+    "title": "AI-driven Ecosystem for Learning, Guidance, and Innovation",
+    "description": "A full-stack AI-powered platform built with FastAPI, React, and MongoDB that connects students, mentors, and recruiters. It provides personalized learning paths, career guidance, and project collaboration spaces driven by intelligent insights.",
     "skills": ["React", "FastAPI", "MongoDB", "AI"],
-    "demo": "https://www.example.com/career-portal-demo",
+    "documentation": "https://gayathirivenkatesh.github.io/docs/AI_Ecosystem_Documentation.pdf",
     "source": "https://github.com/gayathirivenkatesh/career-portal"
   },
   {
     "title": "Smart Hotel Management System",
     "description": "A backend-focused AI-integrated hotel management system built with Django and React. Implements guest prediction models, personalized suggestions, and a blockchain-style ledger for secure and transparent transactions.",
     "skills": ["Django", "React", "AI", "Blockchain"],
-    "demo": "https://www.example.com/smart-hotel-demo",
+    "documentation": "https://gayathirivenkatesh.github.io/docs/Smart_Hotel_Management_System.pdf",
     "source": "https://github.com/gayathirivenkatesh/smart-hotel-ai-system"
   },
   {
     "title": "Image, Text, Video & Metadata Anonymizer",
     "description": "A FastAPI–React application for secure anonymization of multimedia and metadata. Includes an intuitive upload, preview, and comparison workflow to enhance user privacy.",
     "skills": ["React", "FastAPI", "Python", "Data Privacy"],
-    "demo": "https://anonymizer-seven.vercel.app",
+    "documentation": "https://gayathirivenkatesh.github.io/docs/Anonymizer_Project_Documentation_GayathiriV.pdf",
     "source": "https://github.com/gayathirivenkatesh/anonymizer"
   }
 ]
