@@ -1,0 +1,481 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN TOKENS ===== */
+
+/* Base colors for typography and UI */
+:root {
+  /* Fonts */
+  --font-display: "IBM Plex Mono", monospace;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Dark Theme Tokens */
+  --background: #050816;
+  --surface: #0B1120;
+  --card: #111827;
+  --glass: rgba(15, 23, 42, 0.65);
+  --primary: #64FFDA;
+  --secondary: #8B5CF6;
+  --accent: #38BDF8;
+  --text: #F8FAFC;
+  --muted: #94A3B8;
+  --border: rgba(255, 255, 255, 0.08);
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #EF4444;
+  --success-light: rgba(52, 211, 153, 0.1);
+  --warning-light: rgba(251, 191, 36, 0.1);
+  --danger-light: rgba(239, 68, 68, 0.1);
+}
+
+/* Light Theme Tokens */
+body.light {
+  --background: #F5F7FA;
+  --surface: #EEF2F6;
+  --card: #FFFFFF;
+  --glass: rgba(255, 255, 255, 0.72);
+  --primary: #2563EB;
+  --secondary: #7C3AED;
+  --accent: #06B6D4;
+  --text: #0F172A;
+  --muted: #64748B;
+  --border: rgba(15, 23, 42, 0.08);
+  --success: #059669;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --success-light: rgba(5, 150, 105, 0.1);
+  --warning-light: rgba(217, 119, 6, 0.1);
+  --danger-light: rgba(220, 38, 38, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+body.light {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* Subtle scanline texture overlay for depth */
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+body.light .noise::before {
+  opacity: 0.08;
+}
+
+/* Glass morphism surfaces - automatically adapts to theme */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.glass:hover {
+  border-color: rgba(var(--primary), 0.3);
+}
+
+/* Semantic glass variants for different uses */
+.glass-input {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+}
+
+.glass-input:focus-within {
+  border-color: var(--primary);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.light .gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Instrument-panel corner brackets - signature framing device */
+.bracket {
+  position: relative;
+}
+.bracket::before,
+.bracket::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--primary);
+  opacity: 0.4;
+  transition: opacity 0.25s ease;
+}
+.bracket::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.bracket::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+.bracket:hover::before,
+.bracket:hover::after {
+  opacity: 1;
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessible focus states */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scrollbar styling with theme support */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  opacity: 0.3;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.6;
+}
+
+/* Component Classes for Semantic Styling */
+
+/* Cards with proper shadows/glows based on theme */
+@layer components {
+  .card {
+    @apply rounded-lg border transition-all duration-300;
+    background: var(--card);
+    border-color: var(--border);
+  }
+
+  .card:hover {
+    border-color: rgba(var(--primary), 0.2);
+  }
+
+  body:not(.light) .card {
+    box-shadow: 0 8px 32px rgba(100, 255, 218, 0.05);
+  }
+
+  body.light .card {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+  }
+
+  /* Primary button - adapts to theme */
+  .btn-primary {
+    @apply px-6 py-3 rounded-md font-mono font-medium text-sm transition-all;
+    background: var(--primary);
+    color: var(--background);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(var(--primary), 0.3);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply px-6 py-3 rounded-md font-mono font-medium text-sm transition-colors border;
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  /* Icon button */
+  .btn-icon {
+    @apply w-8 h-8 rounded-md flex items-center justify-center transition-all;
+    color: var(--muted);
+  }
+
+  .btn-icon:hover {
+    color: var(--primary);
+    background: rgba(var(--primary), 0.08);
+  }
+
+  /* Badge styling */
+  .badge {
+    @apply text-xs font-mono px-2 py-1 rounded-md transition-colors;
+  }
+
+  .badge-primary {
+    background: rgba(var(--primary), 0.15);
+    color: var(--primary);
+  }
+
+  .badge-secondary {
+    background: rgba(var(--secondary), 0.15);
+    color: var(--secondary);
+  }
+
+  .badge-success {
+    background: var(--success-light);
+    color: var(--success);
+  }
+
+  .badge-warning {
+    background: var(--warning-light);
+    color: var(--warning);
+  }
+
+  .badge-danger {
+    background: var(--danger-light);
+    color: var(--danger);
+  }
+
+  /* Interactive button enhancements */
+  button {
+    @apply relative overflow-hidden;
+  }
+
+  button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    pointer-events: none;
+  }
+
+  button:active::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Link hover effects */
+  a {
+    @apply relative transition-colors;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
+
+  /* Magnetic button effect */
+  .magnetic {
+    position: relative;
+  }
+
+  .magnetic:hover {
+    transform: scale(1.05);
+  }
+
+  /* Glow effect on hover */
+  .glow {
+    @apply transition-all duration-300;
+  }
+
+  .glow:hover {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.4);
+  }
+
+  /* Smooth page transitions */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(var(--primary), 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(var(--primary), 0);
+    }
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Gradient animation */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+}
+
+/* Gradient radial for spotlight */
+@supports (background: radial-gradient(ellipse, transparent, transparent)) {
+  .gradient-radial {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(var(--tw-gradient-to-rgb), 0));
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+}
+
+/* Custom gradient backgrounds */
+body:not(.light)::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(100, 255, 218, 0.08) 0%,
+    rgba(56, 189, 248, 0.04) 25%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 80%,
+    rgba(139, 92, 246, 0.06) 0%,
+    rgba(100, 255, 218, 0.02) 40%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Link hover animation enhancement */
+a:not(.btn-primary):not(.btn-secondary):not(.btn-icon) {
+  position: relative;
+  text-decoration: none;
+}
+
+a:not(.btn-primary):not(.btn-secondary):not(.btn-icon):hover {
+  color: var(--primary);
+}
+
+

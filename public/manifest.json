@@ -1,0 +1,16 @@
+{
+  "name": "Gayathiri V — Full Stack Developer",
+  "short_name": "Gayathiri V",
+  "description": "Portfolio of Gayathiri V, Full Stack Developer building AI-integrated applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070A",
+  "theme_color": "#39FF6A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
