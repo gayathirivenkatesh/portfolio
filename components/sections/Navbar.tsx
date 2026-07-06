@@ -81,10 +81,11 @@ export function Navbar() {
             href="#top"
             className="font-display font-semibold tracking-tight text-sm text-text flex items-center gap-2"
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-mono text-primary">
-              GAYATHIRI
-            </span>
-            <span className="text-muted">{blink ? ":~$" : "    "}</span>
+            gayathiri's@portfolio<span className="text-muted">:~$</span>
+            <span
+              className={`ml-1 w-2 h-4 bg-primary ${blink ? "opacity-100" : "opacity-0"}`}
+              aria-hidden="true"
+            />
           </a>
 
           <ul className="hidden md:flex items-center gap-6 text-xs font-mono">
