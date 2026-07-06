@@ -3,9 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
-import type { projects } from "@/lib/data";
-
-type Project = (typeof projects)[number];
+import type { Project } from "@/lib/data";
 
 export function ProjectCard({
   project,

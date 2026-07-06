@@ -7,11 +7,13 @@ export function useLenis() {
       const lenis = new Lenis({
         duration: 1.2,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        smoothTouch: false,
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        syncTouch: false,
         touchMultiplier: 2,
+        wheelMultiplier: 1.05,
+        autoRaf: true,
       });
 
       function raf(time: number) {

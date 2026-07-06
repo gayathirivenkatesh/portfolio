@@ -202,4 +202,8 @@ export const certifications = [
     issuer: "AWS",
     status: "In Progress",
   },
-];
+] as const;
+
+export type Project = (typeof projects)[number];
+export type Education = (typeof education)[number];
+export type Certification = (typeof certifications)[number];

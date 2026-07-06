@@ -16,7 +16,7 @@ export function Experience() {
           </p>
 
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-text">
-            Where I've shipped code.
+            Where I&apos;ve shipped code.
           </h2>
         </Reveal>
 

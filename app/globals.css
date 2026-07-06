@@ -12,42 +12,42 @@
   --font-mono: "IBM Plex Mono", monospace;
 
   /* Dark Theme Tokens */
-  --background: #050816;
-  --surface: #0B1120;
-  --card: #111827;
-  --glass: rgba(15, 23, 42, 0.65);
-  --primary: #64FFDA;
-  --secondary: #8B5CF6;
-  --accent: #38BDF8;
-  --text: #F8FAFC;
+  --background: #0B0F14;
+  --surface: #121820;
+  --card: #121820;
+  --glass: rgba(18, 24, 40, 0.72);
+  --primary: #4F9CF9;
+  --secondary: #7C3AED;
+  --accent: #14B8A6;
+  --text: #E5E7EB;
   --muted: #94A3B8;
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(38, 52, 69, 0.48);
   --success: #34D399;
   --warning: #FBBF24;
   --danger: #EF4444;
-  --success-light: rgba(52, 211, 153, 0.1);
-  --warning-light: rgba(251, 191, 36, 0.1);
-  --danger-light: rgba(239, 68, 68, 0.1);
+  --success-light: rgba(52, 211, 153, 0.12);
+  --warning-light: rgba(251, 191, 36, 0.12);
+  --danger-light: rgba(239, 68, 68, 0.12);
 }
 
 /* Light Theme Tokens */
 body.light {
-  --background: #F5F7FA;
-  --surface: #EEF2F6;
+  --background: #EAEFF5;
+  --surface: #F8FBFF;
   --card: #FFFFFF;
-  --glass: rgba(255, 255, 255, 0.72);
+  --glass: rgba(255, 255, 255, 0.84);
   --primary: #2563EB;
   --secondary: #7C3AED;
-  --accent: #06B6D4;
-  --text: #0F172A;
+  --accent: #14B8A6;
+  --text: #111827;
   --muted: #64748B;
-  --border: rgba(15, 23, 42, 0.08);
+  --border: rgba(203, 213, 225, 0.65);
   --success: #059669;
   --warning: #D97706;
   --danger: #DC2626;
-  --success-light: rgba(5, 150, 105, 0.1);
-  --warning-light: rgba(217, 119, 6, 0.1);
-  --danger-light: rgba(220, 38, 38, 0.1);
+  --success-light: rgba(5, 150, 105, 0.12);
+  --warning-light: rgba(217, 119, 6, 0.12);
+  --danger-light: rgba(220, 38, 38, 0.12);
 }
 
 html {
@@ -108,7 +108,7 @@ body.light .noise::before {
 }
 
 .glass:hover {
-  border-color: rgba(var(--primary), 0.3);
+  border-color: rgba(var(--primary-rgb), 0.3);
 }
 
 /* Semantic glass variants for different uses */
@@ -215,7 +215,7 @@ body.light .gradient-text {
   }
 
   .card:hover {
-    border-color: rgba(var(--primary), 0.2);
+    border-color: rgba(var(--primary-rgb), 0.2);
   }
 
   body:not(.light) .card {
@@ -235,7 +235,7 @@ body.light .gradient-text {
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(var(--primary), 0.3);
+    box-shadow: 0 8px 16px rgba(var(--primary-rgb), 0.3);
   }
 
   .btn-primary:active {
@@ -263,7 +263,7 @@ body.light .gradient-text {
 
   .btn-icon:hover {
     color: var(--primary);
-    background: rgba(var(--primary), 0.08);
+    background: rgba(var(--primary-rgb), 0.08);
   }
 
   /* Badge styling */
@@ -272,12 +272,12 @@ body.light .gradient-text {
   }
 
   .badge-primary {
-    background: rgba(var(--primary), 0.15);
+    background: rgba(var(--primary-rgb), 0.15);
     color: var(--primary);
   }
 
   .badge-secondary {
-    background: rgba(var(--secondary), 0.15);
+    background: rgba(var(--secondary-rgb), 0.15);
     color: var(--secondary);
   }
 

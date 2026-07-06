@@ -3,9 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Github, ExternalLink } from "lucide-react";
-import type { projects } from "@/lib/data";
-
-type Project = (typeof projects)[number];
+import type { Project } from "@/lib/data";
 
 export function ProjectModal({
   project,
