@@ -202,9 +202,7 @@ export function Skills() {
           ) : (
             <div className="glass rounded-3xl border border-border p-10 text-center text-muted md:col-span-2 lg:col-span-3">
               No technologies found for{" "}
-              <span className="text-primary font-medium">
-                "{query}"
-              </span>
+                <span className="text-primary">&quot;{query}&quot;</span>
             </div>
           )}
 
