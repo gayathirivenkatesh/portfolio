@@ -48,7 +48,7 @@ export function Navbar() {
             href="#top"
             className="font-display font-semibold tracking-tight text-sm text-text flex items-center"
           >
-            gayathiri's@portfolio<span className="text-muted">:~$</span>
+            gayathiri&apos;s@portfolio<span className="text-muted">:~$</span>
             <span
               className={`ml-1 w-2 h-4 bg-primary ${blink ? "opacity-100" : "opacity-0"}`}
               aria-hidden="true"
