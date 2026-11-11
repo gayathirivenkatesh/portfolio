@@ -57,6 +57,17 @@ export const skills = {
 export type SkillCategory = keyof typeof skills;
 
 export const experience = [
+    {
+    role: "Full Stack Development Intern",
+    company: "Ascent E-Digit Solutions Private Limited",
+    location: "Erode",
+    duration: "Oct 2026 – Present",
+    track: "Full Stack Development",
+    points: [
+      "Working on full stack web development tasks as an intern.",
+    ],
+    tech: ["React.js", "FastAPI", "Docker", "MySQL"],
+  },
   {
     role: "Full Stack Development Intern",
     company: "TechnoHacks Solutions Pvt. Ltd.",
