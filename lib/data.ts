@@ -6,7 +6,7 @@ export const profile = {
   name: "Gayathiri Venkatesh",
   title: "Full Stack Developer",
   subtitle: "AI-Integrated Applications",
-  location: "Namakkal, Tamil Nadu",
+  location: "Tiruchengode, Tamil Nadu",
   email: "gayathiri2k4@gmail.com",
   phone: "+91 9360221678",
   github: "https://github.com/gayathirivenkatesh",
@@ -17,7 +17,7 @@ export const profile = {
     "B.Tech Computer Technology graduate (2026) with hands-on experience building full-stack applications in Java, React.js, Node.js, and FastAPI, and a strong foundation in integrating machine learning models into production-grade systems. Comfortable designing RESTful APIs, modelling databases, and shipping end-to-end features — from a multimodal emotion recognition system reaching 85% fusion accuracy to deployed web tools with live users. A quick learner with a bias for building real things.",
   roles: [
     "Full Stack Developer",
-    "AI/ML Engineer",
+    "Software Developer",
     "Backend Engineer",
     "React Developer",
   ],
@@ -57,17 +57,6 @@ export const skills = {
 export type SkillCategory = keyof typeof skills;
 
 export const experience = [
-    {
-    role: "Full Stack Development Intern",
-    company: "Ascent E-Digit Solutions Private Limited",
-    location: "Erode",
-    duration: "Oct 2026 – Present",
-    track: "Full Stack Development",
-    points: [
-      "Working on full stack web development tasks as an intern.",
-    ],
-    tech: ["React.js", "FastAPI", "Docker", "MySQL"],
-  },
   {
     role: "Full Stack Development Intern",
     company: "TechnoHacks Solutions Pvt. Ltd.",
@@ -80,6 +69,17 @@ export const experience = [
       "Delivered a responsive UI using Flexbox and CSS Grid layouts, managed the full project lifecycle via Git version control, and submitted production-ready documentation within the internship timeline.",
     ],
     tech: ["Node.js", "Express.js", "MongoDB", "React.js", "JWT", "Git"],
+  },
+      {
+    role: "Full Stack Development Intern",
+    company: "Ascent E-Digit Solutions Private Limited",
+    location: "Erode",
+    duration: "Oct 2026 – Present",
+    track: "Full Stack Development",
+    points: [
+      "Working on full stack web development tasks as an intern.",
+    ],
+    tech: ["React.js", "FastAPI", "Docker", "MySQL"],
   },
 ];
 
@@ -147,7 +147,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/gayathirivenkatesh/skill_sync",
-      demo: "",
+      demo: "https://skill-sync-sable.vercel.app/",
     },
   },
 
@@ -207,11 +207,6 @@ export const certifications = [
     name: "Introduction to LangChain – Python",
     issuer: "LangChain Academy",
     status: "Completed",
-  },
-  {
-    name: "AWS Cloud Practitioner Essentials",
-    issuer: "AWS",
-    status: "In Progress",
   },
 ] as const;
 
